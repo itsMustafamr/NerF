@@ -87,7 +87,7 @@ tf = 12
 nb_bins = 100
 gamma = 0.5
 
-model = Nerf()
+model = Nerf().to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=lr)
 scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[5, 10], gamma=gamma) # torch.optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.5)
 
