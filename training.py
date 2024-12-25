@@ -85,7 +85,7 @@ lr = 1e-3
 tn = 8
 tf = 12
 nb_bins = 100
-gamma = 0.5
+gamma = 0.5 
 
 model = Nerf().to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=lr)
@@ -94,3 +94,5 @@ scheduler = torch.optim.lr_scheduler.MultiStepLR(optimizer, milestones=[5, 10], 
 
 
 training_loss = training(model, optimizer, scheduler, tn, tf, nb_bins, nb_epochs, dataloader, device=device)
+# img = rendering(model, torch.from_numpy(o[0]), torch.from_numpy(d[0]).to(device), tn, tf, nb_bins=nb_bins, device=device)
+# plt.imshow(img.reshape(400, 400, 3).data.cpu().numpy())
