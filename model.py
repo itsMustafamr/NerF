@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-import tinycudann as tcnn
+#import tinycudann as tcnn
 
 class Voxels(nn.Module):
     

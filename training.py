@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import os
 from torch.utils.data import DataLoader
 from rendering import rendering
-from model import Voxels
+from model_study import Voxels
 from tqdm import tqdm
 from ml_helpers import training 
 from dataset import get_rays
